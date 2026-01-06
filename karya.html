@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karya | Sultan Reyvan Malika</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <h1>Portofolio<span></span></h1>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="profile.html">Profile</a></li>
+    <li><a href="karya.html">Karya</a></li>
+    <li><a href="media.html">Media</a></li>
+    <li><a href="kontak.html">Kontak</a></li>
+  </ul>
+</nav>
+
+<section>
+  <p style="letter-spacing: 5px; color: #475569; font-size: 0.7rem; margin-bottom: 10px; text-transform: uppercase;">Showcase</p>
+  <h2>Portfolio Proyek.</h2>
+  
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 50px;">
+    
+    <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--border); border-radius: 30px; padding: 25px; transition: 0.4s;" onmouseover="this.style.background='rgba(255,255,255,0.05)'; this.style.transform='translateY(-10px)'" onmouseout="this.style.background='rgba(255,255,255,0.02)'; this.style.transform='translateY(0)'">
+      <h3 style="font-size: 1.1rem; margin-bottom: 15px; color: var(--accent-color); letter-spacing: 1px;">Website Portal Berita</h3>
+      <div style="width: 100%; height: 180px; border-radius: 20px; overflow: hidden; border: 1px solid var(--border); margin-bottom: 20px; cursor: pointer;">
+        <img src="Screenshot 2026-01-02 192748.png" alt="Portal Berita" onclick="openModal(this.src)" style="width: 100%; height: 100%; object-fit: cover; transition: 0.5s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+      </div>
+      <p style="font-size: 0.85rem; color: #64748b; line-height: 1.6;">Proyek pembuatan website berita berbasis HTML dan CSS dengan layout responsif dan navigasi intuitif.</p>
+    </div>
+
+    <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--border); border-radius: 30px; padding: 25px; transition: 0.4s;" onmouseover="this.style.background='rgba(255,255,255,0.05)'; this.style.transform='translateY(-10px)'" onmouseout="this.style.background='rgba(255,255,255,0.02)'; this.style.transform='translateY(0)'">
+      <h3 style="font-size: 1.1rem; margin-bottom: 15px; color: var(--accent-color); letter-spacing: 1px;">Form Registrasi</h3>
+      <div style="width: 100%; height: 180px; border-radius: 20px; overflow: hidden; border: 1px solid var(--border); margin-bottom: 20px; cursor: pointer;">
+        <img src="Screenshot 2026-01-02 192823.png" alt="Form Registrasi" onclick="openModal(this.src)" style="width: 100%; height: 100%; object-fit: cover; transition: 0.5s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+      </div>
+      <p style="font-size: 0.85rem; color: #64748b; line-height: 1.6;">Implementasi form input dengan sistem validasi data yang bersih, simpel, dan user-friendly.</p>
+    </div>
+    </div>
+
+  </div>
+</section>
+
+<div id="myModal" onclick="closeModal()" style="display: none; position: fixed; inset: 0; background: rgba(2, 6, 23, 0.95); z-index: 2000; justify-content: center; align-items: center; backdrop-filter: blur(10px); cursor: zoom-out;">
+    <img id="imgTarget" style="max-width: 85%; max-height: 85vh; border-radius: 20px; box-shadow: 0 0 50px rgba(0,0,0,0.5); transform: scale(1); transition: 0.3s;">
+</div>
+
+<footer>
+  <p>&copy; 2026 <span>|</span> SULTAN REYVAN MALIKA <span>|</span> NIM: 251011701156</p>
+</footer>
+
+<script>
+    function openModal(src) {
+        document.getElementById("myModal").style.display = "flex";
+        document.getElementById("imgTarget").src = src;
+    }
+    function closeModal() {
+        document.getElementById("myModal").style.display = "none";
+    }
+</script>
+
+</body>
+</html>

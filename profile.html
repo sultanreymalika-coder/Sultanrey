@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sultan | Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Gue tambahin internal style dikit khusus buat layouting konten profil ya Tan */
+        /* Biar gak ngerusak style.css utama lu */
+        .profile-wrapper {
+            display: flex;
+            gap: 50px;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+        .profile-img-container {
+            flex: 1;
+            min-width: 250px;
+            position: relative;
+        }
+        .profile-img-container img {
+            width: 100%;
+            border-radius: 25px;
+            border: 1px solid var(--border);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        .info-container {
+            flex: 2;
+            min-width: 300px;
+        }
+        .info-row {
+            display: flex;
+            padding: 15px 0;
+            border-bottom: 1px solid var(--border);
+        }
+        .info-label {
+            width: 150px;
+            font-weight: 700;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+        }
+        .info-value {
+            color: #94a3b8;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <h1>Portofolio Saya<span></span></h1>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="karya.html">Karya</a></li>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+    </ul>
+</nav>
+
+<section>
+    <p style="letter-spacing: 5px; color: #475569; font-size: 0.7rem; margin-bottom: 10px; text-transform: uppercase;">Identity</p>
+    <h2>Profile</h2>
+    
+    <div class="profile-wrapper">
+        <div class="profile-img-container">
+            <img src="1.jpeg" alt="Sultan Reyvan Malika">
+        </div>
+
+        <div class="info-container">
+            <div class="info-row">
+                <div class="info-label">Nama</div>
+                <div class="info-value">Sultan Reyvan Malika</div>
+            </div>
+            <div class="info-row">
+                <div class="info-label">NIM</div>
+                <div class="info-value">251011701156</div>
+            </div>
+            <div class="info-row">
+                <div class="info-label">Kelas</div>
+                <div class="info-value">01SIFP017</div>
+            </div>
+            <div class="info-row">
+                <div class="info-label">Keahlian</div>
+                <div class="info-value">HTML, CSS, UI Design</div>
+            </div>
+            <div class="info-row">
+                <div class="info-label">Experience</div>
+                <div class="info-value">SPX Express</div>
+            </div>
+            <div class="info-row">
+                <div class="info-label">Pendidikan</div>
+                <div class="info-value">SDN Ciputat 1, SMPN 10 Tangsel, SMAN 1 Tangsel</div>
+            </div>
+            <div class="info-row" style="border: none;">
+                <div class="info-label">Kontak</div>
+                <div class="info-value">0821-1835-3436</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>CREATED BY <b>SULTAN REYVAN MALIKA</b> / 2026</p>
+</footer>
+
+</body>
+</html>
