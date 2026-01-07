@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap');
 
 :root {
-    --bg-color: #020617; /* Navy yang sangat gelap (Midnight) */
-    --accent-color: #f8fafc; /* Silver / Putih Kristal */
+    --bg-color: #020617; 
+    --accent-color: #f8fafc; 
     --accent-glow: rgba(248, 250, 252, 0.1);
     --text-color: #f1f5f9;
     --card-bg: rgba(255, 255, 255, 0.03);
@@ -14,9 +14,14 @@
     box-sizing: border-box;
 }
 
+/* Tambahan agar gambar & video aman */
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+
 body {
     background-color: var(--bg-color);
-    /* Efek gradasi halus agar background tidak flat */
     background-image: 
         radial-gradient(at 0% 0%, rgba(30, 58, 138, 0.15) 0px, transparent 50%),
         radial-gradient(at 100% 100%, rgba(15, 23, 42, 0.2) 0px, transparent 50%);
@@ -25,34 +30,35 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden; /* Mencegah scroll ke samping yang tak sengaja */
 }
 
-/* NAVBAR UPGRADE */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 8%;
+    padding: 20px 8%; /* Sedikit diperkecil agar lebih compact */
     background: rgba(2, 6, 23, 0.8);
     backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px); /* Dukungan Safari */
     position: sticky; top: 0; z-index: 1000;
     border-bottom: 1px solid var(--border);
 }
 
 nav h1 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 700;
     letter-spacing: 3px;
     text-transform: uppercase;
     color: var(--accent-color);
 }
 
-nav ul { display: flex; list-style: none; gap: 40px; }
+nav ul { display: flex; list-style: none; gap: 30px; }
 
 nav ul li a {
-    color: #64748b; /* Warna abu kebiruan */
+    color: #64748b; 
     text-decoration: none;
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     text-transform: uppercase;
     letter-spacing: 2px;
     transition: 0.4s ease;
@@ -60,25 +66,25 @@ nav ul li a {
 
 nav ul li a:hover {
     color: var(--accent-color);
-    letter-spacing: 4px; /* Efek merenggang pas di-hover */
+    letter-spacing: 3px;
 }
 
-/* SECTION (Glass Slate) */
 section {
     flex: 1;
-    width: 85%;
+    width: 90%; /* Ditingkatkan sedikit agar lebih lega di tablet */
     max-width: 1000px;
-    margin: 60px auto;
-    padding: 80px;
+    margin: 40px auto;
+    padding: 60px; /* Padding default dikurangi sedikit */
     background: var(--card-bg);
     border: 1px solid var(--border);
     border-radius: 40px;
     backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
 }
 
 section h2 {
-    font-size: 4.5rem;
+    font-size: clamp(2.5rem, 8vw, 4.5rem); /* Ukuran font otomatis mengecil di HP */
     font-weight: 700;
     letter-spacing: -2px;
     margin-bottom: 25px;
@@ -87,25 +93,24 @@ section h2 {
     -webkit-text-fill-color: transparent;
 }
 
-section p {
-    font-size: 1.1rem;
-    color: #94a3b8;
-    line-height: 1.8;
-    max-width: 500px;
+/* Responsif untuk Layar Kecil (HP) */
+@media (max-width: 768px) {
+    nav { padding: 20px 5%; flex-direction: column; gap: 15px; }
+    nav ul { gap: 15px; }
+    section { padding: 30px; margin: 20px auto; width: 95%; }
+    section h2 { letter-spacing: -1px; }
 }
 
-/* FOOTER */
 footer {
-    padding: 40px;
+    padding: 30px;
     text-align: center;
     border-top: 1px solid var(--border);
-    font-size: 0.7rem;
-    letter-spacing: 4px;
+    font-size: 0.6rem;
+    letter-spacing: 3px;
     color: #475569;
 }
 
 footer b { color: var(--accent-color); }
 
-/* SCROLLBAR */
-::-webkit-scrollbar { width: 3px; }
-::-webkit-scrollbar-thumb { background: #1e293b; }
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
